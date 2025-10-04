@@ -1,0 +1,96 @@
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Animation Classes */
+.animate-fade-in {
+  animation: fadeIn var(--transition-normal);
+}
+
+.animate-slide-up {
+  animation: slideUp var(--transition-normal);
+}
+
+.animate-slide-down {
+  animation: slideDown var(--transition-normal);
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Hover Animations */
+.hover-scale {
+  transition: transform var(--transition-fast);
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.hover-elevate {
+  transition: transform var(--transition-fast),
+              box-shadow var(--transition-fast);
+}
+
+.hover-elevate:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Loading Animations */
+@keyframes spinner {
+  to { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid var(--text-secondary);
+  border-top-color: var(--primary-color);
+  border-radius: 50%;
+  animation: spinner 0.8s linear infinite;
+}
+
+/* Page Transitions */
+.page-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity var(--transition-normal),
+              transform var(--transition-normal);
+}
+
+/* Motion Reduction */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

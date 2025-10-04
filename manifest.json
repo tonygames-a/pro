@@ -1,0 +1,32 @@
+{
+  "name": "TechNova Solutions",
+  "short_name": "TechNova",
+  "description": "Innovative Technology Solutions for Modern Enterprises",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "assets/icons/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "orientation": "any",
+  "lang": "en-US",
+  "dir": "ltr",
+  "categories": ["business", "technology", "productivity"],
+  "shortcuts": [
+    {
+      "name": "Products",
+      "url": "/pages/products.html",
+      "description": "View our products"
+    },
+    {
+      "name": "Services",
+      "url": "/pages/services.html",
+      "description": "Explore our services"
+    }
+  ]
+}
