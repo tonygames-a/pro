@@ -20,6 +20,9 @@
     --gradient-secondary: linear-gradient(135deg, #06b6d4 0%, #2563eb 100%);
 }
 
+.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;z-index:1000}
+.modal{background:var(--card);border:1px solid rgba(255,255,255,.2);border-radius:16px;padding:22px;width:min(520px,92vw);box-shadow:var(--shadow)}
+
 html {
     scroll-behavior: smooth;
 }
@@ -504,4 +507,5 @@ section {
 .card p {
     color: var(--text-secondary);
     line-height: 1.8;
+
 }
